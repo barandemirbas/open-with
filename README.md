@@ -12,7 +12,7 @@ import "github.com/barandemirbas/open-with"
 # Functions
 ```go
 openwith.Browser("https://github.com/barandemirbas/open-with")
-openwith.Browser("http://127.0.0.1", 8080) // http://127.0.0.1:8080
+openwith.Browser("127.0.0.1", 8080) // http://127.0.0.1:8080
 ```
 **Browser** function opens a new browser tab for pointing url with default browser.
 # Examples
@@ -32,7 +32,7 @@ func (h HttpHandler) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	openwith.Browser("http://127.0.0.1", 9000)
+	openwith.Browser("127.0.0.1", 9000)
 	http.ListenAndServe(":9000", HttpHandler{})
 }
 ```
