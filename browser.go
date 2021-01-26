@@ -5,11 +5,15 @@ import (
 	"log"
 	"os/exec"
 	"runtime"
+	"strconv"
 )
 
 // Browser function opens a new browser tab for pointing url with default browser.
-func Browser(url string) {
+func Browser(url string, port ...int) {
 	var err error
+	if port != nil {
+		url += ":" + strconv.Itoa(port[0])
+	}
 	switch runtime.GOOS {
 	case "linux":
 		err = exec.Command("xdg-open", url).Start()
