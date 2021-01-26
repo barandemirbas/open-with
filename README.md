@@ -10,11 +10,11 @@ Add to your imports to start using **Open With**
 import "github.com/barandemirbas/open-with"
 ```
 # Functions
+**Browser** function opens a new browser tab for pointing url with default browser.
 ```go
 openwith.Browser("https://github.com/barandemirbas/open-with")
 openwith.Browser("127.0.0.1", 8080) // http://127.0.0.1:8080
 ```
-**Browser** function opens a new browser tab for pointing url with default browser.
 # Examples
 Example with **Browser** function:
 ```go
