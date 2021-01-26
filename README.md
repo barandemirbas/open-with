@@ -10,14 +10,10 @@ Add to your imports to start using **Open With**
 import "github.com/barandemirbas/open-with"
 ```
 # Functions
-**Browser** function opens a new browser tab for pointing url with default browser.
 ```go
 openwith.Browser("https://github.com/barandemirbas/open-with")    
 ```
-**PDFViewer** function opens a specific .pdf file with default PDF Viewer.
-```go
-openwith.PDFViewer("./example.pdf")
-```
+**Browser** function opens a new browser tab for pointing url with default browser.
 # Examples
 Example with **Browser** function:
 ```go
