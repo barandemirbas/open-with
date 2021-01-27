@@ -13,15 +13,15 @@ import (
 // Browser function opens a new browser tab for pointing url with default browser.
 func Browser(URL string, PORT ...int) {
 	var err error
-	var sub = []string{"http://", "https://"}
-	match := 0
-	for _, sub := range sub {
-		if strings.Contains(URL, sub) {
-			match += 1
+	var scheme = []string{"http://", "https://"}
+	var isURL = false
+	for _, scheme := range scheme {
+		if strings.Contains(URL, scheme) {
+			isURL = true
 			break
 		}
 	}
-	if match == 0 {
+	if !isURL {
 		URL = "http://" + URL
 	}
 	u, _ := url.Parse(URL)
