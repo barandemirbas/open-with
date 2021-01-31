@@ -36,7 +36,7 @@ func Browser(URL string, PORT ...int) {
 	case "windows":
 		err = exec.Command("rundll32", "url.dll,FileProtocolHandler", URL).Start()
 	default:
-		err = fmt.Errorf("Sorry, we do not support this OS.")
+		err = fmt.Errorf("Sorry your OS not supports open the browser with a URL")
 	}
 	if err != nil {
 		log.Fatal(err)
